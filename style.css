@@ -1,6 +1,6 @@
 body{
   background-color: black;
-  color:black;
+  color:transparent;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: grid;
   grid-template-rows: 1fr 5fr 1fr;
@@ -11,6 +11,10 @@ body{
   "footer footer footer";
   grid-gap: 0.75rem;
   height: 100vh;
+  @media screen and (max-width:425) {
+    
+    min-height: -webkit-fill-available;
+  }
 }
 
 header{
@@ -43,6 +47,9 @@ h1 {
 }
 h3 {
   font-size: 2.5rem;
+  @media screen and (max-width:425px) {
+    font-size: 1.5rem;
+  }
 }
 a{
   color: inherit;
@@ -69,7 +76,9 @@ ul li {
   font-size: 2rem;
   margin-bottom: 2%;
   text-align: center;
-  padding: 0 10%;
+  @media screen and (max-width:425px) {
+    font-size: 1.2rem;
+  }
 }
 .btn-eye {
   display: inline;
@@ -82,4 +91,16 @@ ul li {
 .btn-eye :hover{
   width: 70px;
   height: 70px;
+}
+.sr-only {
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important;
+	-webkit-clip-path: inset(50%) !important;
+	clip-path: inset(50%) !important;
+	height: 1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important;
 }
